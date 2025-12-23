@@ -34,25 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 ```
-**Explanation of Each**
-1.django.contrib.admin
-- Provides Django’s admin interface.
-2.django.contrib.auth
-- Handles authentication and authorization (users, groups, permissions).
-3.django.contrib.contenttypes
-- Enables generic relationships between models.
-4.django.contrib.sessions
-- Manages session data across requests.
-5.django.contrib.messages
-- Provides a messaging framework (e.g., success/error messages).
-6.django.contrib.staticfiles
-- Manages static files like CSS, JS, images.
-**Are There More Apps?**
-  Yes. Django also provides optional apps such as:
-- django.contrib.sites
-- django.contrib.humanize
-- django.contrib.sitemaps
-You can also create custom apps or install third-party apps.
+
 ### What is middleware? What are different kinds of middleware? Read up a little on each security issue.
 Middleware is a layer between the request and response cycle.
 It processes:
@@ -75,18 +57,23 @@ It processes:
 - Enforces HTTPS
 - Prevents SSL attacks
 - Enables HSTS (HTTP Strict Transport Security)
+  
 **SessionMiddleware**
 - Enables session handling
 - Stores user-specific data between requests
+  
 **CommonMiddleware**
 - URL normalization
 - Handles broken links
 - Adds Content-Length headers
+  
 **AuthenticationMiddleware**
 - Associates users with requests
 - Enables request.user
+  
 **MessageMiddleware**
 - Enables flash messages (success, error, warning)
+  
 **Clickjacking Protection Middleware**
 - Prevents site from being embedded in malicious iframes
 ### Django Security
